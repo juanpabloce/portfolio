@@ -15,7 +15,6 @@ dist-ssr
 .eslintignore
 .prettierrc.cjs
 .prettierignore
-config.environment.js
 
 # Editor directories and files
 .vscode/*
