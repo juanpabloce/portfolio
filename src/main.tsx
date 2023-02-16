@@ -1,8 +1,10 @@
 import ReactDOM from 'react-dom/client';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import { ExampleMUI } from './components/ExampleMUI';
+import './assets/index.css';
+import { ThemeProvider } from './context/themeContext';
+import App from './components/App';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<ExampleMUI />);
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
+);
