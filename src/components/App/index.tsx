@@ -1,13 +1,23 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../context/themeContext';
+import { ThemeProvider, Divider } from '@mui/material';
+import { WelcomeHome } from '../WelcomeHome';
+import { AboutMe } from '../AboutMe';
+import { Companies } from '../Companies';
+import { useTheme } from '../../hooks/useTheme';
+import { Certifications } from '../Certifications';
 
 const App = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   return (
-    <div className="app" style={theme}>
-      Hello World
-    </div>
+    <ThemeProvider theme={theme}>
+      <WelcomeHome />
+      <Divider variant="middle" />
+      <AboutMe />
+      <Divider variant="middle" />
+      <Companies />
+      <Divider variant="middle" />
+      <Certifications />
+    </ThemeProvider>
   );
 };
 
